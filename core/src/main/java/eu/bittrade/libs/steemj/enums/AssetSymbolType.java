@@ -6,6 +6,10 @@ package eu.bittrade.libs.steemj.enums;
  * @author <a href="http://steemit.com/@dez1337">dez1337</a>
  */
 public enum AssetSymbolType {
+    /** Hive Power (HP) Symbol */
+    HIVE,
+    /** Hive Backed Dollar (HBD) Symbol */
+    HBD, 
     /** Steem Power (SP) Symbol */
     VESTS,
     /** Steem Sybol */
