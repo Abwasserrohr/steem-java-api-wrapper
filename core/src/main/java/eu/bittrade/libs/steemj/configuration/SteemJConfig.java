@@ -36,14 +36,14 @@ import eu.bittrade.libs.steemj.exceptions.SteemTimeoutException;
 public class SteemJConfig {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SteemJConfig.class);
 	/** The endpoint URI used by default. */
-	private static final String DEFAULT_STEEM_API_URI = "https://api.steemit.com";
+	private static final String DEFAULT_STEEM_API_URI = "https://api.openhive.network";
 	/** The SteemJ account. */
-	private static final AccountName STEEMJ_ACCOUNT = new AccountName("steemj");
-	private static final AccountName ALT_BENEFICIARY_ACCOUNT = new AccountName("leatherdog-games");
+	private static final AccountName STEEMJ_ACCOUNT = new AccountName("null");
+	private static final AccountName ALT_BENEFICIARY_ACCOUNT = new AccountName("abwasserrohr");
 	/**
 	 * The default beneficiary account.
 	 */
-	private AccountName beneficiaryAccount = ALT_BENEFICIARY_ACCOUNT;
+	private AccountName beneficiaryAccount = STEEMJ_ACCOUNT;
 	/** The SteemJ version. */
 	private static final String STEEMJ_VERSION = SteemJ.class.getPackage().getImplementationVersion();
 	/** The SteemJ App-Name */
@@ -116,17 +116,17 @@ public class SteemJConfig {
 		this.dateTimePattern = "yyyy-MM-dd'T'HH:mm:ss";
 		this.apiUsername = new AccountName(System.getProperty("steemj.api.username", ""));
 		this.apiPassword = System.getProperty("steemj.api.password", "").toCharArray();
-		this.maximumExpirationDateOffset = 3600000L;
+		this.maximumExpirationDateOffset = 400000L;
 		this.timeZoneId = "GMT";
 		this.encodingCharset = StandardCharsets.UTF_8;
 		this.privateKeyStorage = new PrivateKeyStorage();
 		this.addressPrefix = AddressPrefixType.STM;
-		this.chainId = "0000000000000000000000000000000000000000000000000000000000000000";
-		this.steemJWeight = 250;
-		this.validationLevel = ValidationType.ALL;
+		this.chainId = "beeab0de00000000000000000000000000000000000000000000000000000000";
+		this.steemJWeight = 0;
+		this.validationLevel = ValidationType.SKIP_VALIDATION;
 		this.synchronizationLevel = SynchronizationType.FULL;
-		this.dollarSymbol = AssetSymbolType.SBD;
-		this.tokenSymbol = AssetSymbolType.STEEM;
+		this.dollarSymbol = AssetSymbolType.HBD;
+		this.tokenSymbol = AssetSymbolType.HIVE;
 		this.vestsSymbol = AssetSymbolType.VESTS;
 
 		// Fill the key store with the provided accountName and private keys.
