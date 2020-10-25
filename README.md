@@ -17,7 +17,7 @@ Example below is for latest 0.4.x-SNAPSHOT. Visit https://jitpack.io/#marvin-we/
 		}
 	}
     dependencies {
-	        compile 'com.github.marvin-we.steem-java-api-wrapper:steemj-core:0.4.x-SNAPSHOT'
+	        compile 'com.github.Abwasserrohr:steem-java-api-wrapper:-SNAPSHOT'
 	}
 ```
 
