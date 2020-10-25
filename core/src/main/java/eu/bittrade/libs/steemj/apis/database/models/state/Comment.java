@@ -101,7 +101,7 @@ public class Comment {
     @JsonProperty("max_accepted_payout")
     private Asset maxAcceptedPayout;
     // Original type is uint16_t.
-    @JsonProperty("percent_steem_dollars")
+    @JsonProperty("percent_hbd")
     private short percentSteemDollars;
     @JsonProperty("allow_replies")
     private boolean allowReplies;
