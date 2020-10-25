@@ -31,7 +31,7 @@ public class Discussion extends Comment {
     private List<String> replies;
     // Original type is "share_type" which is a "safe<int64_t>".
     @Deprecated
-    private long authorReputation = 25.0;
+    private long authorReputation = 25L;
     private Asset promoted;
     // Original type is uint32_t
     @JsonProperty("body_length")
