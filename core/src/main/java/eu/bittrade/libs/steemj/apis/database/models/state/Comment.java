@@ -69,8 +69,8 @@ public class Comment {
     @JsonProperty("vote_rshares")
     private long voteRshares;
     // Original type is "share_type" which is a "safe<int64_t>".
-    @JsonProperty("children_abs_rshares")
-    private long childrenAbsRshares;
+    @Deprecated
+    private long childrenAbsRshares = 0.0;
     @JsonProperty("cashout_time")
     private TimePointSec cashoutTime;
     @JsonProperty("max_cashout_time")
@@ -94,17 +94,17 @@ public class Comment {
     @JsonProperty("net_votes")
     private int netVotes;
     // Original type is comment_id_type.
-    @JsonProperty("root_comment")
-    private long rootComment;
+    @Deprecated
+    private long rootComment = 0.0;
     @Deprecated
     private String mode;
     @JsonProperty("max_accepted_payout")
     private Asset maxAcceptedPayout;
     // Original type is uint16_t.
+    @Deprecated
     @JsonProperty("percent_hbd")
     private short percentSteemDollars;
-    @JsonProperty("allow_replies")
-    private boolean allowReplies;
+    private boolean allowReplies = true;
     @JsonProperty("allow_votes")
     private boolean allowVotes;
     @JsonProperty("allow_curation_rewards")
