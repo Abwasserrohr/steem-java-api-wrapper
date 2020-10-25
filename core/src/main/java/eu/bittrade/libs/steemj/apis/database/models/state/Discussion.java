@@ -27,15 +27,16 @@ public class Discussion extends Comment {
     // Original type is vector<vote_state>.
     @JsonProperty("active_votes")
     private List<VoteState> activeVotes;
+    @Deprecated
     private List<String> replies;
     // Original type is "share_type" which is a "safe<int64_t>".
-    @JsonProperty("author_reputation")
-    private long authorReputation;
+    @Deprecated
+    private long authorReputation = 25.0;
     private Asset promoted;
     // Original type is uint32_t
     @JsonProperty("body_length")
     private String bodyLength;
-    @JsonProperty("reblogged_by")
+    @Deprecated
     private List<AccountName> rebloggedBy;
     @JsonProperty("first_reblogged_by")
     private AccountName firstRebloggedBy;
