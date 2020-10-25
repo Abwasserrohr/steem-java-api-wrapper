@@ -70,7 +70,7 @@ public class Comment {
     private long voteRshares;
     // Original type is "share_type" which is a "safe<int64_t>".
     @Deprecated
-    private long childrenAbsRshares = 0.0;
+    private long childrenAbsRshares = 0L;
     @JsonProperty("cashout_time")
     private TimePointSec cashoutTime;
     @JsonProperty("max_cashout_time")
@@ -95,7 +95,7 @@ public class Comment {
     private int netVotes;
     // Original type is comment_id_type.
     @Deprecated
-    private long rootComment = 0.0;
+    private long rootComment = 0L;
     @Deprecated
     private String mode;
     @JsonProperty("max_accepted_payout")
